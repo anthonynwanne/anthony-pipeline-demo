@@ -21,5 +21,10 @@ pipeline{
                 sh 'cat /etc/os-release'
             }
         }
+        stage('5-securitycheck'){
+            steps{
+                sh 'bash -x /var/lib/jenkins/workspace/1st pipeline/security.sh'
+            }
+        }
     }
 }
