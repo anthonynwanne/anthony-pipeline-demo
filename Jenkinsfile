@@ -13,10 +13,10 @@ pipeline{
         }
         stage('3-memorycheck'){
             steps{
-                sh 'fre -g'
+                sh 'free -g'
             }
         }
-        stage('4-os-stat'){
+        stage('4-os-stats'){
             steps{
                 sh 'cat/etc/os-release'
             }
