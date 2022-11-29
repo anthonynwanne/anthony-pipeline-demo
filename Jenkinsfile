@@ -23,7 +23,7 @@ pipeline{
         }
         stage('5-securitycheck'){
             steps{
-                sh 'bash -x /var/lib/jenkins/workspace/1st pipeline/security.sh'
+                sh 'bash -x /var/lib/jenkins/workspace/1st-pipeline/security.sh'
             }
         }
     }
