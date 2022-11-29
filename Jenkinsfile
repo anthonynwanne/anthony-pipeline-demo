@@ -3,7 +3,7 @@ pipeline{
     stages{
         stage('1-clonerepo'){
             steps{
-                sh 'echo "hello Etech"'
+                checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/anthonynwanne/anthony-pipeline-demo.git']]])
             }
         }
         stage('2-sysanalysis'){
